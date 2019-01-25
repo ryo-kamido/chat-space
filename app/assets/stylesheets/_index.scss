@@ -20,14 +20,14 @@
       background-color:#253141;
       padding: 0 20px;
       clear: both;
-      h3{
+      &__name{
       font-size: 16px;
       display: inline-block;
       color:#FFFFFF;
       font-weight:bold;
       float:left;
       }
-      ul.header__lists{
+      ul.header-lists{
         li.list{
           float:right;
           .fa.fa-cog.icon{
@@ -44,12 +44,12 @@
       height:calc(100vh - 100px);
       padding: 0 20px;
       .group{
-        .group_name{
+        &__name{
           color:#FFFFFF;
           font-size:15px;
           padding-top: 20px;
         }
-        .group_message{
+        &__message{
           color:#FFFFFF;
           font-size:11px;
         }
@@ -87,12 +87,12 @@
           padding-top:46px;
           .high-data{
             display:flex;
-            .upper-data__user-name{
+            &__user-name{
               font-weight:bold;
               font-size:16px;
               color:#434A54;
             }
-            .upper-data__date{
+            &__date{
               padding-left: 10px;
               font-size:14px;
               color:#434A54;
