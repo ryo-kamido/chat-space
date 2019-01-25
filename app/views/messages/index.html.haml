@@ -28,12 +28,22 @@
           sampleグループ
       .member
         %h3
-          aaa,bbb,ccc
+          Member: aaa bbb ccc
     .message-box
-      .message
+      .message_area
+        .message
+          .message_username
+            username
+          .message_date
+            2019/01/22 2:50
+          .message_input
+            aaaa
       .post-box
         = form_for('/tweets', method: :post) do
           %textarea{:cols => "30", :name => "text", :placeholder => "type a message", :rows => "10",:class=>"text"}
-          %input{:name => "image", :placeholder => "Image fire", :type => "file" ,:class => "image"}/
+          .image_form
+            %label
+              %i.fa.fa-image.icon.fa-2x
+              %input{:name => "image", :placeholder => "Image fire", :type => "file" ,:class => "image" ,:style=>"display:none"}/
           %input{:type => "submit", :value => "SEND",:class => "send"}/
 

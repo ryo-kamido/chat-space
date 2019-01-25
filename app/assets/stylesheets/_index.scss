@@ -74,9 +74,16 @@
     .message-box{
       background-color:#F0FFFF;
       height:calc(100vh - 100px);
-      .message{
+      .message_area{
         height:calc(100vh - 100px - 90px);
         padding:0 40px;
+         .message{
+          .message_username{
+            font-weight:bold;
+          }
+          .message_date{
+          }
+         }
       }
       .post-box{
         background-color: #DCDCDC;
@@ -84,13 +91,26 @@
         height:90px;
         .text{
           height:50px;
+          width:calc(100% - 200px);
+          float:left;
+          border-style: none;
         }
-        .image{
-          height:50px;
+        .image_form{
+          height: 50px;
+          width: 50px;
+          background-color: white;
+          border: none;
+          float:left;
+          display:inline-block;
         }
         .send{
           background-color:#38AEF0;
           height:50px;
+          color:white;
+          float:left;
+          border-style: none;
+          width:100px;
+          margin-left: 25px;
         }
       }
     }
