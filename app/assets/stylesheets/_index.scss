@@ -30,7 +30,13 @@
       ul.header__lists{
         li.list{
           float:right;
-          color:#FFFFFF;
+          .fa.fa-cog.icon{
+            color:white;
+          }
+          .fa.fa-edit.icon{
+            color:white;
+            padding:5px;
+          }
         }
       }
     }
@@ -72,18 +78,30 @@
       }
     }
     .message-box{
-      background-color:#F0FFFF;
+      background-color:#F5F5F5;
       height:calc(100vh - 100px);
       .message_area{
         height:calc(100vh - 100px - 90px);
         padding:0 40px;
-         .message{
-          .message_username{
-            font-weight:bold;
+        .message{
+          padding-top:46px;
+          .high-data{
+            display:flex;
+            .upper-data__user-name{
+              font-weight:bold;
+              font-size:16px;
+              color:#434A54;
+            }
+            .upper-data__date{
+              padding-left: 10px;
+              font-size:14px;
+              color:#434A54;
+            }
           }
-          .message_date{
+          .low-data{
+            padding-bottom: 40px;
           }
-         }
+        }
       }
       .post-box{
         background-color: #DCDCDC;
@@ -101,7 +119,11 @@
           background-color: white;
           border: none;
           float:left;
-          display:inline-block;
+          .fa.fa-image{
+            font-size: 20px;
+            padding-top: 15px;
+            padding-left: 10px;
+          }
         }
         .send{
           background-color:#38AEF0;

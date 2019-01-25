@@ -32,18 +32,14 @@
     .message-box
       .message_area
         .message
-          .message_username
-            username
-          .message_date
-            2019/01/22 2:50
-          .message_input
-            aaaa
+          %p.each
+            = render partial: "message"
       .post-box
         = form_for('/tweets', method: :post) do
           %textarea{:cols => "30", :name => "text", :placeholder => "type a message", :rows => "10",:class=>"text"}
           .image_form
             %label
-              %i.fa.fa-image.icon.fa-2x
+              %i.fa.fa-image
               %input{:name => "image", :placeholder => "Image fire", :type => "file" ,:class => "image" ,:style=>"display:none"}/
           %input{:type => "submit", :value => "SEND",:class => "send"}/
 
