@@ -1,12 +1,20 @@
 .wrapper
-  .bar
+  .top-bar
     %h3
       チャットグループが作成されました
 
   .side-bar
     .header
-      %h3
+      %h3.header__name
         seo
+      %ul.header__lists
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-cog.icon
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-edit.icon
+
     .groups
       .group
         .group_name
@@ -25,6 +33,7 @@
       .message
       .post-box
         = form_for('/tweets', method: :post) do
-          %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10",:class=>"text"}
-          %input{:name => "image", :placeholder => "Image Url", :type => "text" ,:class => "image"}/
+          %textarea{:cols => "30", :name => "text", :placeholder => "type a message", :rows => "10",:class=>"text"}
+          %input{:name => "image", :placeholder => "Image fire", :type => "file" ,:class => "image"}/
           %input{:type => "submit", :value => "SEND",:class => "send"}/
+
