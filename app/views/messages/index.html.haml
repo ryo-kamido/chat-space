@@ -1,0 +1,45 @@
+.wrapper
+  .top-bar
+    %h3
+      チャットグループが作成されました
+
+  .side-bar
+    .header
+      %h3.header__name
+        seo
+      %ul.header-lists
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-cog.icon
+        %li.list
+          %a{:href => ""}
+            %i.fa.fa-edit.icon
+
+    .groups
+      .group
+        .group__name
+          sample
+        .group__message
+          good_bye!
+  .chat
+    .header
+      .now_groupname
+        %h3
+          sampleグループ
+      .member
+        %h3
+          Member: aaa bbb ccc
+    .message-box
+      .message_area
+        .message
+          %p.each
+            = render partial: "message"
+      .post-box
+        = form_for('/tweets', method: :post) do
+          %textarea{:cols => "30", :name => "text", :placeholder => "type a message", :rows => "10",:class=>"text"}
+          .image_form
+            %label
+              %i.fa.fa-image
+              %input{:name => "image", :placeholder => "Image fire", :type => "file" ,:class => "image" ,:style=>"display:none"}/
+          %input{:type => "submit", :value => "SEND",:class => "send"}/
+
