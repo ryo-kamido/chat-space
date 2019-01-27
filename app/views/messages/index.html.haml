@@ -6,13 +6,13 @@
   .side-bar
     .header
       %h3.header__name
-        seo
+        =current_user.name
       %ul.header-lists
         %li.list
           %a{:href => ""}
             %i.fa.fa-cog.icon
         %li.list
-          %a{:href => ""}
+          =link_to edit_user_path(current_user) do
             %i.fa.fa-edit.icon
 
     .groups
