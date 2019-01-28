@@ -1,14 +1,18 @@
 .wrapper
+  .top-bar
+    %h3
+      チャットグループが作成されました
+
   .side-bar
     .header
       %h3.header__name
-        =current_user.name
+        seo
       %ul.header-lists
         %li.list
           %a{:href => ""}
             %i.fa.fa-cog.icon
         %li.list
-          =link_to edit_user_path(current_user) do
+          %a{:href => ""}
             %i.fa.fa-edit.icon
 
     .groups
