@@ -1,23 +1,5 @@
 .wrapper
-  .side-bar
-    .header
-      %h3.header__name
-        =current_user.name
-      %ul.header-lists
-        %li.list
-          %a{:href => ""}
-          = link_to edit_user_path(current_user) do
-            %i.fa.fa-cog.icon
-        %li.list
-          = link_to new_group_path do
-            %i.fa.fa-edit.icon
-
-    .groups
-      .group
-        .group__name
-          sample
-        .group__message
-          good_bye!
+  = render 'groups/side_bar'
   .chat
     .header
       .now_groupname
