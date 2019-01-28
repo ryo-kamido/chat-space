@@ -2,12 +2,16 @@
   = render 'groups/side_bar'
   .chat
     .header
-      .now_groupname
-        %h3
-          sampleグループ
-      .member
-        %h3
-          Member: aaa bbb ccc
+      .left-header
+        .now_groupname
+          %h3
+            sampleグループ
+        .member
+          %h3
+            Member: aaa bbb ccc
+      .right-header
+        %a.right-header__button{:href => "/groups/edit"} Edit
+
     .message-box
       .message_area
         .message
