@@ -109,10 +109,13 @@
           background-color: white;
           border: none;
           float:left;
-          .fa.fa-image{
+          .fa-image{
             font-size: 20px;
             padding-top: 15px;
             padding-left: 10px;
+            .hiden{
+              display: none;
+            }
           }
         }
         .send{
