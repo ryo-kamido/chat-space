@@ -4,10 +4,10 @@
     .header
       .now_groupname
         %h3
-          sampleグループ
+          = @group.name
       .member
         %h3
-          Member: aaa bbb ccc
+          Member: #{@group.users[0].name}
     .message-box
       .message_area
         = render @messages
