@@ -73,6 +73,7 @@
       .message_area{
         height:calc(100vh - 100px - 90px);
         padding:0 40px;
+        overflow: scroll;
         .message{
           padding-top:46px;
           .high-data{

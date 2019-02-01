@@ -10,9 +10,7 @@
           Member: aaa bbb ccc
     .message-box
       .message_area
-        .message
-          %p.each
-            = render partial: "message"
+        = render @messages
       .post-box
         = form_for [@group,@message] do |f|
           = f.text_field :content, class: 'text', placeholder: 'type a message'
