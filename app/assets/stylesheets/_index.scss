@@ -73,6 +73,7 @@
       .message_area{
         height:calc(100vh - 100px - 90px);
         padding:0 40px;
+        overflow: scroll;
         .message{
           padding-top:46px;
           .high-data{
@@ -109,10 +110,13 @@
           background-color: white;
           border: none;
           float:left;
-          .fa.fa-image{
+          .fa-image{
             font-size: 20px;
             padding-top: 15px;
             padding-left: 10px;
+            .hiden{
+              display: none;
+            }
           }
         }
         .send{

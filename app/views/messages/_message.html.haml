@@ -1,5 +1,11 @@
-.high-data
-  .high-data__user-name ryo53
-  .high-data__date 2019/01/22 06:25
-.low-data
-  %p.low-data__content aaaa
+.message
+  .high-data
+    .high-data__user-name
+      = message.user.name
+    .high-data__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .low-data
+    - if message.content.present?
+      %p.low-data__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
