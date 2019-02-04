@@ -7,7 +7,7 @@
           = @group.name
       .member
         %h3
-          Member: #{@group.users[0].name}
+          Member: #{@group.users.pluck(:name).join(", ")}
     .message-box
       .message_area
         = render @messages
