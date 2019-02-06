@@ -1,9 +1,6 @@
 $(document).on('turbolinks:load',function(){
   function buildHTML(message){
-  var imagefile = '';
-  if (message.image.url) {
-    imagefile = `<img src="${message.image.url}", class = 'lower-message__image'>`;
-  }
+  var imagefile = message.image.url? `<img src="${message.image.url}", class = 'lower-message__image'>` : "";
   var html = `<div class = "message">
                 <div class="high-data">
                   <div class="high-data__user-name">${message.user_name}</div>
