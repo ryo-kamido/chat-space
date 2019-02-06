@@ -49,7 +49,7 @@ $(document).on('turbolinks:load',function(){
     });
 
     $('#chat-group-users').on('click','.user-search-remove',function(){
-      $('#chat-group-users').parent().empty();
+      $('#chat-group-users').remove();
     });
   });
 });
