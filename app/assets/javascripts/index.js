@@ -8,7 +8,7 @@ $(function(){
   };
   $("#user-search-field").on("keyup",function(){
     var input = $("#user-search-field").val();
-
+    var result = $('#user-search-result')
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -16,11 +16,11 @@ $(function(){
       dataType: 'json'
     })
     .done(function(users){
-      $(".user-search-result").empty();
+      result.empty();
       if (users.length !== 0){
         users.forEach(function(user){
           var html = appendUser(user);
-          $('#user-search-result').append(html)
+          result.append(html)
         });
       }
     })

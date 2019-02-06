@@ -35,7 +35,7 @@ $(document).on('turbolinks:load',function(){
       alert('error');
     })
     .always(() => {
-    $(".send").removeAttr("disabled");
+      $(".send").removeAttr("disabled");
     });
   })
 });
