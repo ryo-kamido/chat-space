@@ -44,9 +44,7 @@ $(document).on('turbolinks:load',function(){
   });
 
   function update(){
-    console.log(location.href);
     var message_id = $('.message').last().data('id');
-    console.log(message_id);
     $.ajax({
       url: location.href,
       type: 'GET',
