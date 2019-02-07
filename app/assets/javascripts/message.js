@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load',function(){
-  function buildHTML(message){
+  function buildMessageHTML(message){
   var imagefile = message.image.url? `<img src="${message.image.url}", class = 'lower-message__image'>` : "";
   var html = `<div class = "message" data-id=${message.id}>
                 <div class="high-data">
@@ -26,7 +26,7 @@ $(document).on('turbolinks:load',function(){
       contentType: false,
     })
     .done(function(data){
-      var html = buildHTML(data);
+      var html = buildMessageHTML(data);
       $('.message_area').append(html)
       $('.post-box').val('')
       $('.message_area').animate({scrollTop: $('.message_area')[0].scrollHeight},'fast');
@@ -54,11 +54,10 @@ $(document).on('turbolinks:load',function(){
       dataType: 'json',
     })
     .done(function(messages) {
-      console.log(messages);
        if (messages.length){
          insertHTML = "";
          $.each(messages, function(i, message){
-            insertHTML = buildHTML(message);
+            insertHTML = buildMessageHTML(message);
            $('.message_area').append(insertHTML)
          })
        }
