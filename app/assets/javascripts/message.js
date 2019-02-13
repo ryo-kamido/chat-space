@@ -40,7 +40,9 @@ $(document).on('turbolinks:load',function(){
   });
 
   $(function(){
+    if ($('.message')[0]){
     setInterval(update,5000);
+  }
   });
 
   function update(){
